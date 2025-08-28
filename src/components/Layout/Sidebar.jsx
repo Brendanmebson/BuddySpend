@@ -10,11 +10,11 @@ import {
 } from 'lucide-react';
 
 const navigation = [
-  { name: 'Dashboard', href: '/', icon: Home },
-  { name: 'Transactions', href: '/transactions', icon: CreditCard },
-  { name: 'Budgets', href: '/budgets', icon: Target },
-  { name: 'Analytics', href: '/analytics', icon: BarChart3 },
-  { name: 'Reports', href: '/reports', icon: TrendingUp },
+  { name: 'Dashboard', href: '/', icon: Home, color: 'blue' },
+  { name: 'Transactions', href: '/transactions', icon: CreditCard, color: 'green' },
+  { name: 'Budgets', href: '/budgets', icon: Target, color: 'purple' },
+  { name: 'Analytics', href: '/analytics', icon: BarChart3, color: 'yellow' },
+  { name: 'Reports', href: '/reports', icon: TrendingUp, color: 'pink' },
 ];
 
 const Sidebar = () => {
@@ -29,7 +29,7 @@ const Sidebar = () => {
                 className={({ isActive }) =>
                   `flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                     isActive
-                      ? 'bg-primary-50 text-primary-600 border-r-2 border-primary-600'
+                      ? `bg-${item.color}-50 text-${item.color}-600 border-r-2 border-${item.color}-600`
                       : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                   }`
                 }
